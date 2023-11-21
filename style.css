@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+#search-area {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#search-area input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#search-area button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-area button:hover {
+    background-color: #0056b3;
+}
+
+#search-history {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#search-history h3 {
+    margin-top: 0;
+}
+
+.history-btn {
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.history-btn:hover {
+    background-color: #dde0e3;
+}
+
+#weather-display, #forecast-display {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#weather-display h2 {
+    margin-top: 0;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.forecast {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    flex-basis: calc(20% - 20px);
+    text-align: center;
+}
+
+.forecast img {
+    width: 50px;
+    height: auto;
+}
+
+.forecast h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.forecast p {
+    margin: 5px 0;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .forecast {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast {
+        flex-basis: 100%;
+    }
+
+    #search-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search-area input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #search-area button {
+        width: 100%;
+    }
+}
